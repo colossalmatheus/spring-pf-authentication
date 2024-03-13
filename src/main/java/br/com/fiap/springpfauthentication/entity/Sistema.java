@@ -39,20 +39,16 @@ public class Sistema {
             name = "TB_2TDSPF_RESPONSAVEIS",
             joinColumns = {
                     @JoinColumn(
-                            name = "TB_2TDSPF_SISTEMA",
+                            name = "ID_SISTEMA",
                             referencedColumnName = "ID_SISTEMA",
-                            foreignKey = @ForeignKey(
-                                    name = "FK_ID_SISTEMA"
-                            )
+                            foreignKey = @ForeignKey(name = "FK_ID_SISTEMA")
                     )
             },
             inverseJoinColumns = {
                     @JoinColumn(
-                            name = "TB_2TDSPF_USUARIO",
+                            name = "ID_USUARIO",
                             referencedColumnName = "ID_USUARIO",
-                            foreignKey = @ForeignKey(
-                                    name = "FK_ID_USUARIO"
-                            )
+                            foreignKey = @ForeignKey(name = "FK_ID_USUARIO")
                     )
             }
     )

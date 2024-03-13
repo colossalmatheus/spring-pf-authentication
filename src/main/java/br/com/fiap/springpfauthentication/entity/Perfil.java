@@ -31,23 +31,19 @@ public class Perfil {
 
     @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
     @JoinTable(
-            name = "TB_2TDSPF_PERMISSOES",
+            name = "TB_2TDSPF_PERFIL_PERMISSAO",
             joinColumns = {
                     @JoinColumn(
-                            name = "TB_2TDSPF_PERFIL",
+                            name = "ID_PERFIL",
                             referencedColumnName = "ID_PERFIL",
-                            foreignKey = @ForeignKey(
-                                    name = "FK_ID_PERFIL"
-                            )
+                            foreignKey = @ForeignKey(name = "FK_ID_PERFIL")
                     )
             },
             inverseJoinColumns = {
                     @JoinColumn(
-                            name = "TB_2TDSPF_PERMISSAO",
+                            name = "ID_PERMISSAO",
                             referencedColumnName = "ID_PERMISSAO",
-                            foreignKey = @ForeignKey(
-                                    name = "FK_ID_PERMISSAO"
-                            )
+                            foreignKey = @ForeignKey(name = "FK_ID_PERFIL")
                     )
             }
     )

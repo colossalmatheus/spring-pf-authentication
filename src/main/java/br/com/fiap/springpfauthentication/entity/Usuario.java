@@ -34,7 +34,7 @@ public class Usuario {
 
     @OneToOne(fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
     @JoinColumn(
-            name = "TB_2TDSPF_PESSOA",
+            name = "ID_PESSOA",
             referencedColumnName = "ID_PESSOA",
             foreignKey = @ForeignKey(name = "FK_PESSOA")
     )

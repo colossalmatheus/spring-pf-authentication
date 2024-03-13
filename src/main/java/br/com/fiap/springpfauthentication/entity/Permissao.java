@@ -31,7 +31,7 @@ public class Permissao {
 
     @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
     @JoinColumn(
-            name = "TB_2TDSPF_PERMISSAO",
+            name = "ID_SISTEMA",
             referencedColumnName = "ID_SISTEMA",
             foreignKey = @ForeignKey(name = "FK_ID_SISTEMA")
     )
