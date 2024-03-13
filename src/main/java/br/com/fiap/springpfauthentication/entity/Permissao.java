@@ -1,4 +1,4 @@
-package entity;
+package br.com.fiap.springpfauthentication.entity;
 
 
 import jakarta.persistence.*;
@@ -28,6 +28,15 @@ public class Permissao {
 
     @Column(name = "NM_PERMISSAO")
     private String nome;
+
+    @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
+    @JoinColumn(
+            name = "TB_2TDSPF_PERMISSAO",
+            referencedColumnName = "ID_SISTEMA",
+            foreignKey = @ForeignKey(name = "FK_ID_SISTEMA")
+    )
+
+    private Sistema sistema;
 
 
 }

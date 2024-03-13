@@ -1,4 +1,4 @@
-package entity;
+package br.com.fiap.springpfauthentication.entity;
 
 
 import jakarta.persistence.*;
