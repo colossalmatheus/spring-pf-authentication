@@ -43,7 +43,7 @@ public class Perfil {
                     @JoinColumn(
                             name = "ID_PERMISSAO",
                             referencedColumnName = "ID_PERMISSAO",
-                            foreignKey = @ForeignKey(name = "FK_ID_PERFIL")
+                            foreignKey = @ForeignKey(name = "FK_ID_PERMISSAO")
                     )
             }
     )
